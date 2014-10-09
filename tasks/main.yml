@@ -1,0 +1,20 @@
+---
+- name: 'copy collector installer'
+  copy:
+    src='{{ sumologic_installer_file }}'
+    dest='{{ sumologic_installer_remote_file }}'
+- name: 'run collector installer'
+  apt: deb='{{ sumologic_installer_remote_file }}'
+- name: 'add collector configuration'
+  template:
+    src=sumo.conf.j2
+    dest=/etc/sumo.conf
+- name: 'add collector sources configuration'
+  template:
+    src='{{ sumologic_collector_source_template }}'
+    dest=/etc/sumo-sources.json
+  when: sumologic_collector_source_template is defined
+- name: 'restart collector'
+  service:
+    name=collector
+    state=restarted
