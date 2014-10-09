@@ -13,7 +13,7 @@ Role Variables
 
 The following variables are required:
 ```yml
-- sumologic_installer # Should be a path to a .deb file downloaded from Sumologic
+- sumologic_installer_file # Should be a path to a .deb file downloaded from Sumologic
 ```
 
 The following variables are optional:
