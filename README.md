@@ -13,7 +13,9 @@ Role Variables
 
 The following variables are required:
 ```yml
-- sumologic_installer_file # Should be a path to a .deb file downloaded from Sumologic
+# Should be a path to a .deb file downloaded from Sumologic
+# Available after account creation (click 'Add Collector' -> 'Installed Collector')
+- sumologic_installer_file
 ```
 
 The following variables are optional:
