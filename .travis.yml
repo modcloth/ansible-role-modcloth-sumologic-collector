@@ -1,9 +1,4 @@
 language: python
-env:
-  global:
-  - NETWORK_ENV=demo
-  - ROLE=travis
-  - TEAM=platform
 install:
 - pip install -r requirements.txt
 script:
