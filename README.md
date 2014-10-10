@@ -59,12 +59,12 @@ Example Playbook
 ```yml
 - hosts: servers
   roles:
-     - role: modcloth.sumologic-collector
-         sumologic_installer_file: files/sumocollector_19.99-1_amd64.deb
-         sumologic_collector_source_template: templates/sumo-sources.json.j2
-         sumologic_collector_accessid: 'foo'
-         sumologic_collector_accesskey: 'bar'
-         sumologic_collector_override: 'true'
+  - role: modcloth.sumologic-collector
+    sumologic_installer_file: files/sumocollector_19.99-1_amd64.deb
+    sumologic_collector_source_template: templates/sumo-sources.json.j2
+    sumologic_collector_accessid: 'foo'
+    sumologic_collector_accesskey: 'bar'
+    sumologic_collector_override: 'true'
 ```
 
 License
