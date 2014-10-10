@@ -1,0 +1,8 @@
+---
+- hosts: all
+  roles:
+  - role: modcloth.sumologic-collector
+    sumologic_installer_file: files/sumo.deb
+    sumologic_collector_accessid: 'foo'
+    sumologic_collector_accesskey: 'bar'
+    sumologic_collector_override: 'true'
