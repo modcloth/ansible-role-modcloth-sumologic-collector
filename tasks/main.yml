@@ -2,6 +2,7 @@
 - name: 'check if sumologic is installed'
   command: dpkg-query -l sumocollector
   register: sumologic_collector_deb_check
+  failed_when: no
 - name: 'copy collector installer'
   copy:
     src='{{ sumologic_installer_file }}'
